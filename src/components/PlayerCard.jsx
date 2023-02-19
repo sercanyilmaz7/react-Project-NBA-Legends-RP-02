@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { UseState } from "react";
 
 const PlayerCard = ({ item }) => {
   const { img, name, statistics } = item;

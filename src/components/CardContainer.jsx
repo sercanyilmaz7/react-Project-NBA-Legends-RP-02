@@ -17,7 +17,7 @@ const CardContainer = () => {
       <div className="player_container">
         {data
           .filter((player) => {
-            if (searchCard == "") {
+            if (searchCard === "") {
               return player;
             } else if (
               player.name
@@ -28,15 +28,7 @@ const CardContainer = () => {
             }
           })
           .map((item, index) => {
-            if (item=={}) {
-              return (
-                <div className="bos">
-                  <p>bos</p>
-                </div>
-              );
-            } else {
-              return <PlayerCard item={item} key={index} />;
-            }
+            return <PlayerCard item={item} key={index} />;
           })}
       </div>
     </div>
