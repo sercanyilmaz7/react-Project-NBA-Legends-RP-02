@@ -17,15 +17,9 @@ const CardContainer = () => {
       <div className="player_container">
         {data
           .filter((player) => {
-            if (searchCard === "") {
-              return player;
-            } else if (
-              player.name
-                .toLocaleLowerCase()
-                .includes(searchCard.toLocaleLowerCase())
-            ) {
-              return player;
-            }
+            return player.name
+              .toLocaleLowerCase()
+              .includes(searchCard.toLocaleLowerCase());
           })
           .map((item, index) => {
             return <PlayerCard item={item} key={index} />;
@@ -40,3 +34,19 @@ export default CardContainer;
 // map((item, index) => {
 //   return <PlayerCard item={item} key={index} />;
 // });
+
+// <div className="player_container">
+//   {data
+//     .filter((player) => {
+//       if (searchCard === "") {
+//         return player;
+//       } else if (
+//         player.name.toLocaleLowerCase().includes(searchCard.toLocaleLowerCase())
+//       ) {
+//         return player;
+//       }
+//     })
+//     .map((item, index) => {
+//       return <PlayerCard item={item} key={index} />;
+//     })}
+// </div>;
