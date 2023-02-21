@@ -19,7 +19,7 @@ const CardContainer = () => {
           .filter((player) => {
             return player.name
               .toLocaleLowerCase()
-              .includes(searchCard.toLocaleLowerCase());
+              .includes(searchCard.trim().toLocaleLowerCase());
           })
           .map((item, index) => {
             return <PlayerCard item={item} key={index} />;
